@@ -35,8 +35,7 @@ output :
 int main()
 {
 
-    val =
-        MinStack *obj = new MinStack();
+    val = MinStack *obj = new MinStack();
     obj->push(val);
     obj->pop();
     int param_3 = obj->top();
