@@ -46,6 +46,20 @@ public:
 
         return result;
     }
+
+    int romanToInt2(string s)
+    {
+        map<char, int> m{
+            {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000}};
+        unsigned int result = 0;
+
+        for (int i = s.length() - 1; i >= 0; i--)
+        {
+
+            result = (i < s.length() - 1 && m[s[i]] < m[s[i + 1]]) ? result - m[s[i]] : result + m[s[i]];
+        }
+        return result;
+    }
 };
 
 int main()
@@ -58,5 +72,11 @@ int main()
     cout << solution.romanToInt("MCMXCIV") << endl;
     cout << solution.romanToInt("DCXXI") << endl;
     cout << solution.romanToInt("MDCXCV") << endl;
+
+    cout << solution.romanToInt2("III") << endl;
+    cout << solution.romanToInt2("LVIII") << endl;
+    cout << solution.romanToInt2("MCMXCIV") << endl;
+    cout << solution.romanToInt2("DCXXI") << endl;
+    cout << solution.romanToInt2("MDCXCV") << endl;
     return 0;
 }
