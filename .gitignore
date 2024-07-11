@@ -3,4 +3,5 @@ cpp/build/PascalTriangle.exe
 .vscode/settings.json
 .vscode/tasks.json
 .vscode/settings.json
+.gitignore
 cpp/reverseBits.cpp
