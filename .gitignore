@@ -1,7 +1,0 @@
-cpp/build/PascalTriangle.exe
-.vscode/c_cpp_properties.json
-.vscode/settings.json
-.vscode/tasks.json
-.vscode/settings.json
-.gitignore
-cpp/reverseBits.cpp
