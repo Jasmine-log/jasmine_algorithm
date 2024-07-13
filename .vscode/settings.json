@@ -1,10 +1,13 @@
 {
     "files.associations": {
+        "stack": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp",
-        "xlocale": "cpp",
         "array": "cpp",
-        "string_view": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "disabled"
+        "deque": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "xlocinfo": "cpp",
+        "xstring": "cpp",
+        "xutility": "cpp"
+    }
 }
