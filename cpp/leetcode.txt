@@ -1,0 +1,5 @@
+# leetcode
+## Explorer - Top Interview Questions : Easy Collections
+https://leetcode.com/explore/featured/card/top-interview-questions-easy/
+## Prolbems - Top Interview 150
+https://leetcode.com/studyplan/top-interview-150/
