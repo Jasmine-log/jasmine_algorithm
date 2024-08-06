@@ -30,6 +30,25 @@ public:
         }
         return minimum;
     }
+
+    int minSubArrayLen2(int target, vector<int> &nums) 
+    {
+        int sum = 0;
+        int minimum = INT_MAX;
+		
+        for(int window=1; win<=nums.size();win++){
+        	for(int start=0;start<nums.size()-window;start++){
+            	min=0;
+                ans>=0;
+            }
+        }
+        // 메서드 분리
+        if (minimum == INT_MAX)
+        {
+            return 0;
+        }
+        return minimum;
+    }
 };
 
 int main()
