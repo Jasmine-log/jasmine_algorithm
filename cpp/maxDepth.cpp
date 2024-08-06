@@ -49,7 +49,7 @@ public:
             int qsize = q.size();
             vector<int> v;
             for (int i = 0; i < qsize; i++)
-            {
+            { 
                 TreeNode *node = q.front();
                 q.pop();
                 if (node->left != nullptr)
