@@ -51,7 +51,38 @@ public:
         }
         return root;
     }
+
     bool isSameTree(TreeNode *p, TreeNode *q)
+    {
+        // 두 트리 노드가 모두 nullptr인 경우, 동일한 구조로 간주
+        if (p == nullptr && q == nullptr)
+        {
+            return true;
+        }
+
+        // 두 트리 노드 중 하나만 nullptr인 경우, 구조가 다르므로 false
+        if (p == nullptr || q == nullptr)
+        {
+            return false;
+        }
+
+        // 현재 노드의 값이 동일한지 확인
+        if (p->val != q->val)
+        {
+            return false;
+        }
+
+        // 왼쪽 자식 노드 비교
+        bool isLeftSame = isSameTree(p->left, q->left);
+
+        // 오른쪽 자식 노드 비교
+        bool isRightSame = isSameTree(p->right, q->right);
+
+        // 두 자식 노드 모두 동일해야 전체 트리가 동일함
+        return isLeftSame && isRightSame;
+    }
+
+    bool isSameTree2(TreeNode *p, TreeNode *q)
     {
         if (!p && !q)
         {
@@ -76,6 +107,43 @@ public:
         preOrder(root->right);
     }
 
+    /* Poor code
+    bool isSameTree(TreeNode *p, TreeNode *q)
+    {
+
+        while (p->left!=nullptr)
+        {
+            if (p->left != nullptr)
+            {
+                if (p->left == q->left)
+                {
+                    p->left = p->left;
+                    p->left = p->left;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            if (p->right != nullptr)
+            {
+                if (p->right == q->right)
+                {
+                    p->right = p->right;
+                    p->right = p->right;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            if (p->left == nullptr && p->right == nullptr)
+            {
+                break;
+            }
+        }
+        return true;
+    }*/
 };
 
 int main()
